@@ -47,9 +47,11 @@
         left: 0;
         background-color: library.$White;
         padding: 16px;
-        height: calc(60px + 16px * 2);
+        height: calc(60px + 60px + 16px * 2);
         box-shadow: 0 8px 16px #0002;
 
-        // background-color: #f00;
+        &__button{
+            margin-bottom: 60px;
+        }
     }
 }
