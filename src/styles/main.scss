@@ -1,0 +1,43 @@
+@use 'library';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Ubuntu-Medium';
+    src: url(../assets/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    src: url(../assets/fonts/Ubuntu-Bold.ttf);
+}
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    src: url(../assets/fonts/Ubuntu-Regular.ttf);
+}
+
+html{
+    font-size: 62.5%;
+    font-family: Ubuntu-Medium;
+}
+
+h1, h2{
+    font-family: Ubuntu-Bold;
+}
+
+#root{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+body{
+    background-color:  library.$Magnolia;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 1.6rem;
+}

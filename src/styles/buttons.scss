@@ -1,0 +1,55 @@
+@use 'library';
+@use 'sass:color';
+
+.step-buttons-container{
+    // background-color: #f00;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    // padding-block: 16px;
+    
+    &__button{
+        background-color: library.$Marine_blue;
+        color: library.$White;
+        padding-inline: 30px;
+        text-align: center;
+        font-size: 2rem;
+        font-family: Ubuntu-Medium;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        text-transform: capitalize;
+        transition: color .2s, background-color .2s;
+        
+        &:hover{
+            background-color: color.change(library.$Marine_blue, $whiteness: 15%);
+        }
+        
+        &.secondary{
+            background-color: transparent;
+            color: library.$Cool_gray;
+
+            &:hover{
+                color: library.$Marine_blue;
+            }
+        }
+
+        &.invisible{
+            visibility: hidden;
+        }
+    }
+
+    @media (max-width: 768px){
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: library.$White;
+        padding: 16px;
+        height: calc(60px + 16px * 2);
+        box-shadow: 0 8px 16px #0002;
+
+        // background-color: #f00;
+    }
+}

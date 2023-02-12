@@ -1,0 +1,23 @@
+@use 'library';
+
+.content{
+    display: grid;
+    grid-template-rows: 1fr 60px;
+    margin-inline: calc(5vw - 4px) ;
+    // background-color: #00f;
+    height: calc(80vh - 40px);
+    position: relative;
+
+    @media (max-width: 768px) {
+        position: static;
+        margin-top: 80px;
+        height: fit-content;
+        border-radius: 16px;
+        padding-inline: 16px ;
+        box-shadow: 0 8px 16px #0002;
+        background-color: library.$White;
+        width: calc(100% - (12px * 2));
+        margin-inline: 12px;
+        
+    }
+}

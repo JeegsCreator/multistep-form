@@ -1,0 +1,24 @@
+@use 'library';
+@use 'sass:color';
+
+.body{
+    width: 1000px;
+    // aspect-ratio: 12/8;
+    height: 80vh;
+    background-color: library.$White;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 40px color.change(library.$Cool_gray, $alpha: 0.4);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 0;
+        display: block;
+        background-color: transparent;
+    }
+}

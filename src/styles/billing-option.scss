@@ -1,0 +1,48 @@
+@use 'library';
+
+.billing-option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    background-color: library.$Magnolia;
+    padding: 16px;
+    border-radius: 12px;
+    gap: 16px;
+
+    &__text{
+        text-transform: capitalize;
+        color: library.$Cool_gray;
+        font-weight: 700;
+        transition: color .2s;
+        
+        &.active{
+            color: library.$Marine_blue;
+        }
+    }
+
+    &__button{
+        height: 20px;
+        width: 40px;
+        border: none;
+        border-radius: 10px;
+        background-color: library.$Marine_blue;
+        padding: 4px;
+        cursor: pointer;
+        // display: flex;
+        
+        &.yearly{
+            & .billing-option__button__circle{
+                transform: translateX(20px);
+            }
+        }
+        
+        &__circle{
+            transition: transform .2s;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background-color: library.$White;
+        }
+    }
+}

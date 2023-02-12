@@ -1,0 +1,61 @@
+@use 'library';
+
+.input-container{
+    // background-color: #f00;
+    width: 100%;
+    margin-bottom: 16px;
+
+    &__info{
+        display: flex;
+        justify-content: space-between;
+
+        &__label{
+            color: library.$Marine_blue;
+            text-transform: capitalize;
+            margin-bottom: 8px;
+            font-family: Ubuntu-Bold;
+        }
+
+        &__error{
+            color: library.$Strawberry_red;
+            text-transform: capitalize;
+            visibility: hidden;
+            margin-bottom: 8px;
+            font-family: Ubuntu-Bold;
+
+            &.error{
+                visibility: visible;
+            }
+        }
+    }
+
+    &__input{
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        border: 1px solid library.$Light_gray;
+        padding-inline: 10px;
+        font-size: 2rem;
+        font-family: Ubuntu-Medium;
+
+        &[type=number]::-webkit-inner-spin-button,
+        &[type=number]::-webkit-outer-spin-button
+        {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+
+        &::placeholder{
+            color: library.$Cool_gray;
+        }
+
+        &:focus-visible{
+            outline: 1px solid library.$Purplish_blue;
+        }
+
+        &.error{
+            outline: 1px solid library.$Strawberry_red;
+        }
+    }
+}

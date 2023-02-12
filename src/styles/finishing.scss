@@ -1,0 +1,78 @@
+@use 'library';
+
+.summary{
+    &__bill{
+        background-color: library.$Magnolia;
+        padding: 16px;
+        border-radius: 12px;
+
+        &__plan{
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__left{
+                &__title{
+                    text-transform: capitalize;
+                    color: library.$Marine_blue;
+                    font-weight: 700;
+                }
+
+                &__change{
+                    border: none;
+                    background-color: transparent;
+                    color: library.$Cool_gray;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+
+            &__right{
+                &__price{
+                    color: library.$Marine_blue;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        &__add-ons{
+            border-top: 1px solid library.$Cool_gray ;
+            padding-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            &__ao{
+                display: flex;
+                justify-content: space-between;
+
+                &__title{
+                    color: library.$Cool_gray;
+                }
+
+                &__price{
+                    color: library.$Marine_blue
+                }
+            }
+        }
+    }
+
+    &__total{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        padding-inline: 20px;
+
+        &__title{
+            color: library.$Cool_gray;
+        }
+
+        &__price{
+            color: library.$Purplish_blue;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+    }
+}

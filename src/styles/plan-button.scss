@@ -1,0 +1,82 @@
+@use 'library';
+
+.plan-button{
+    &__box{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        &__error{
+            position: absolute;
+            top: -20px;
+            color: library.$Strawberry_red;
+            text-transform: capitalize;
+            visibility: hidden;
+        }
+    
+        &__input{
+            display: none;
+    
+            &:checked~.plan-button__box__button{
+                border: 1px solid library.$Purplish_blue;
+                background-color: library.$Magnolia;
+            }
+    
+            &.error+.plan-button__box__error{
+                visibility: visible;
+            }
+        }
+    
+        &__button{
+            cursor: pointer;
+            aspect-ratio: 5/6;
+            // background-color: #f00;
+            display: inline-block;
+            border-radius: 12px;
+            padding: 16px 12px;
+            border: 1px solid library.$Cool_gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border .2s, background-color .2s;
+    
+            &:hover{
+                border: 1px solid library.$Purplish_blue;
+            }
+    
+    
+            &__info{
+                &__title{
+                    text-transform: capitalize;
+                    color: library.$Marine_blue;
+                    font-weight: 700;
+                }
+                
+                &__price{
+                    font-weight: 400;
+                    margin-block: 4px;
+                    color: library.$Cool_gray;
+                }
+    
+                &__free{
+                    color: library.$Marine_blue;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px){
+        
+        &__box{
+            display: flex;
+            flex-direction: column;
+            &__button{
+                aspect-ratio: auto;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 12px;
+            }
+        }
+    }
+}
